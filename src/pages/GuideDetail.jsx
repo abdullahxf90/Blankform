@@ -6,6 +6,7 @@ import { AdSlot } from '../components/AdSlot';
 import { AdPageWrapper } from '../components/AdPageWrapper';
 import { getGuideBySlug } from '../data/guidesData';
 import { NotFound } from './NotFound';
+import { generateBreadcrumbSchema } from '../utils/schemaGenerator';
 
 export function GuideDetail({ slug }) {
   const guide = getGuideBySlug(slug);
@@ -37,6 +38,13 @@ export function GuideDetail({ slug }) {
       '@id': `https://blankform.abdullah-xf90.workers.dev/guides/${guide.slug}`
     }
   };
+
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Guides', item: '/guides' },
+    { name: guide.title, item: `/guides/${guide.slug}` }
+  ]);
+
+  const combinedSchema = [articleSchema, breadcrumbSchema];
 
   // Basic renderer for guide sections
   const renderContent = (rawText) => {
@@ -93,7 +101,7 @@ export function GuideDetail({ slug }) {
         description={guide.metaDescription}
         canonicalUrl={`https://blankform.abdullah-xf90.workers.dev/guides/${guide.slug}`}
         type="article"
-        schemaData={articleSchema}
+        schemaData={combinedSchema}
       />
       <Header />
 
