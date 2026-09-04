@@ -34,7 +34,7 @@ export function CvGallery() {
       <SEO 
         title="Free CV & Resume Maker — No Sign Up Required | Blankform"
         description="Choose from 100 ATS-friendly and executive CV templates. Customize career summaries, work experience, and top colors in your browser, then export to PDF/PNG instantly without registration."
-        canonicalUrl="https://blankform.com/cv"
+        canonicalUrl="https://blankform.vercel.app/cv"
       />
       <Header />
 

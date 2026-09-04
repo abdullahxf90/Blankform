@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 export function SEO({
   title = 'Blankform — Free Certificate & CV Maker, No Sign Up',
   description = 'Create certificates and CVs for free. No sign up, no watermark, and nothing you type is saved or sent to a server. Pick a template and download instantly.',
-  canonicalUrl = 'https://blankform.com/',
+  canonicalUrl = 'https://blankform.vercel.app/',
   type = 'website',
   schemaData = null
 }) {

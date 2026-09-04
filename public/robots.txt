@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://blankform.com/sitemap.xml
+Sitemap: https://blankform.vercel.app/sitemap.xml

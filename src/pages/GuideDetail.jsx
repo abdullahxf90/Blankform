@@ -29,12 +29,12 @@ export function GuideDetail({ slug }) {
       'name': 'Blankform',
       'logo': {
         '@type': 'ImageObject',
-        'url': 'https://blankform.com/favicon.svg'
+        'url': 'https://blankform.vercel.app/favicon.svg'
       }
     },
     'mainEntityOfPage': {
       '@type': 'WebPage',
-      '@id': `https://blankform.com/guides/${guide.slug}`
+      '@id': `https://blankform.vercel.app/guides/${guide.slug}`
     }
   };
 
@@ -91,7 +91,7 @@ export function GuideDetail({ slug }) {
       <SEO 
         title={guide.metaTitle}
         description={guide.metaDescription}
-        canonicalUrl={`https://blankform.com/guides/${guide.slug}`}
+        canonicalUrl={`https://blankform.vercel.app/guides/${guide.slug}`}
         type="article"
         schemaData={articleSchema}
       />

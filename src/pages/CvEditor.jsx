@@ -116,7 +116,7 @@ export function CvEditor({ templateId }) {
       <SEO
         title={template.metaTitle || `${template.title} — Free Download | Blankform`}
         description={template.metaDescription || template.description}
-        canonicalUrl={`https://blankform.com/cv/${template.slug || template.id}`}
+        canonicalUrl={`https://blankform.vercel.app/cv/${template.slug || template.id}`}
         schemaData={schemaData}
       />
       <Header />

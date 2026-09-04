@@ -34,7 +34,7 @@ export function CertificateGallery() {
       <SEO 
         title="Free Certificate Maker — No Sign Up Required | Blankform"
         description="Choose from 100 free certificate templates. Fill in recipient details, customized titles, and signatures, then download as high-res PDF or PNG instantly — no account, no watermark."
-        canonicalUrl="https://blankform.com/certificate"
+        canonicalUrl="https://blankform.vercel.app/certificate"
       />
       <Header />
 
