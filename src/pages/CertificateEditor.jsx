@@ -3,6 +3,7 @@ import { Header } from '../components/Header';
 import { FormField } from '../components/FormField';
 import { LivePreview } from '../components/LivePreview';
 import { AdSlot } from '../components/AdSlot';
+import { SEO } from '../components/SEO';
 import { getTemplateById } from '../templates';
 import { exportToPDF } from '../engine/exportPDF';
 import { exportToPNG } from '../engine/exportPNG';
@@ -32,8 +33,27 @@ export function CertificateEditor({ templateId }) {
     setIsExporting(false);
   };
 
+  const schemaData = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    'name': template.title,
+    'applicationCategory': 'BusinessApplication',
+    'operatingSystem': 'Any (Web-based)',
+    'offers': {
+      '@type': 'Offer',
+      'price': '0',
+      'priceCurrency': 'USD'
+    }
+  };
+
   return (
     <div className="editor-wrapper">
+      <SEO
+        title={template.metaTitle || `${template.title} — Free & Printable | Blankform`}
+        description={template.metaDescription || template.description}
+        canonicalUrl={`https://blankform.com/certificate/${template.slug || template.id}`}
+        schemaData={schemaData}
+      />
       <Header />
 
       <div className="editor-panes">
@@ -41,9 +61,14 @@ export function CertificateEditor({ templateId }) {
         <div className="editor-left-pane">
           <div style={{ marginBottom: '24px' }}>
             <a href="/certificate" style={{ fontSize: '13px', color: 'var(--graphite)', display: 'inline-block', marginBottom: '12px' }}>
-              ← Back to templates
+              ← Back to Certificate Templates
             </a>
-            <h2 style={{ fontSize: '22px' }}>Editing: {template.title}</h2>
+            <h1 style={{ fontSize: '24px', fontWeight: 700, color: 'var(--ink)', marginBottom: '8px' }}>
+              {template.title}
+            </h1>
+            <p style={{ fontSize: '14px', color: 'var(--graphite)', lineHeight: 1.6, marginBottom: '16px' }}>
+              {template.seoIntro || template.description}
+            </p>
           </div>
 
           {/* Top Sidebar Ad Unit */}

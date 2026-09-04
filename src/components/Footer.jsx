@@ -5,10 +5,11 @@ export function Footer() {
     <footer className="footer">
       <div className="container footer-content">
         <div className="footer-links">
+          <a href="/certificate">Certificate Templates</a>
+          <a href="/cv">CV &amp; Resume Templates</a>
+          <a href="/guides">Career &amp; Certificate Guides</a>
           <a href="/about">About Blankform</a>
           <a href="/privacy">Privacy Note</a>
-          <a href="/certificate">Certificate Templates</a>
-          <a href="/cv">CV Templates</a>
         </div>
         <p className="text-small">
           Nothing you create on Blankform is stored on our servers. All document processing and export happen 100% locally inside your browser.

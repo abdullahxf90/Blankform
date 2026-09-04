@@ -4,6 +4,8 @@ import { CertificateGallery } from './pages/CertificateGallery';
 import { CertificateEditor } from './pages/CertificateEditor';
 import { CvGallery } from './pages/CvGallery';
 import { CvEditor } from './pages/CvEditor';
+import { GuidesHub } from './pages/GuidesHub';
+import { GuideDetail } from './pages/GuideDetail';
 import { About } from './pages/About';
 import { Privacy } from './pages/Privacy';
 import { NotFound } from './pages/NotFound';
@@ -62,6 +64,15 @@ export function App() {
     if (path.startsWith('/cv/')) {
       const templateId = path.split('/cv/')[1];
       return <CvEditor templateId={templateId} />;
+    }
+
+    if (path === '/guides') {
+      return <GuidesHub />;
+    }
+
+    if (path.startsWith('/guides/')) {
+      const slug = path.split('/guides/')[1];
+      return <GuideDetail slug={slug} />;
     }
 
     if (path === '/about') {

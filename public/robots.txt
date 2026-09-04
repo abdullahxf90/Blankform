@@ -1,0 +1,5 @@
+# Blankform robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://blankform.com/sitemap.xml

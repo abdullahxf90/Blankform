@@ -4,9 +4,10 @@ import { DocumentRenderer } from '../engine/renderTemplate';
 export function TemplateCard({ template, linkPrefix = '' }) {
   const isLandscape = template.orientation === 'landscape' || template.type === 'certificate';
   const prefix = linkPrefix || (template.type === 'certificate' ? '/certificate' : '/cv');
+  const targetUrl = `${prefix}/${template.slug || template.id}`;
 
   return (
-    <a href={`${prefix}/${template.id}`} className="template-card">
+    <a href={targetUrl} className="template-card" title={`Edit ${template.title}`}>
       <div 
         className="template-card-preview"
         style={{

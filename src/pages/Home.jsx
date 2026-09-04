@@ -2,6 +2,7 @@ import React from 'react';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { AdSlot } from '../components/AdSlot';
+import { SEO } from '../components/SEO';
 import { CERTIFICATE_TEMPLATES, CV_TEMPLATES } from '../templates';
 import { DocumentRenderer } from '../engine/renderTemplate';
 
@@ -9,18 +10,32 @@ export function Home() {
   const sampleCert = CERTIFICATE_TEMPLATES[0];
   const sampleCv = CV_TEMPLATES[0];
 
+  const websiteSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    'name': 'Blankform',
+    'url': 'https://blankform.com',
+    'description': 'Free certificate and CV maker, no sign up required.'
+  };
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+      <SEO 
+        title="Blankform — Free Certificate & CV Maker, No Sign Up"
+        description="Create certificates and CVs for free. No sign up, no watermark, and nothing you type is saved or sent to a server. Pick a template and download instantly."
+        canonicalUrl="https://blankform.com/"
+        schemaData={websiteSchema}
+      />
       <Header />
 
       <main className="container" style={{ paddingTop: '64px', paddingBottom: '64px' }}>
         {/* Hero Section */}
         <section style={{ maxWidth: '680px', marginBottom: '64px' }}>
-          <h1 style={{ marginBottom: '16px', fontSize: '38px', letterSpacing: '-0.02em' }}>
-            Blankform — Create certificates and CVs in minutes.
+          <h1 style={{ marginBottom: '16px', fontSize: '38px', letterSpacing: '-0.02em', color: 'var(--ink)' }}>
+            Make a certificate or CV in a few minutes.
           </h1>
-          <p style={{ fontSize: '18px', color: 'var(--graphite)', marginBottom: '32px' }}>
-            100% free document generator. No signup. No watermark. Client-side privacy.
+          <p style={{ fontSize: '18px', color: 'var(--graphite)', marginBottom: '32px', lineHeight: 1.5 }}>
+            No sign up required. No watermarks. Nothing saved or uploaded to a server.
           </p>
           <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
             <a href="/certificate" className="btn btn-primary">

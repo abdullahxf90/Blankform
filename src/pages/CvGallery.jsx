@@ -4,6 +4,7 @@ import { Footer } from '../components/Footer';
 import { TemplateCard } from '../components/TemplateCard';
 import { AdSlot } from '../components/AdSlot';
 import { AdPageWrapper } from '../components/AdPageWrapper';
+import { SEO } from '../components/SEO';
 import { CV_TEMPLATES } from '../templates';
 
 const CATEGORIES = [
@@ -30,21 +31,26 @@ export function CvGallery() {
 
   return (
     <div>
+      <SEO 
+        title="Free CV & Resume Maker — No Sign Up Required | Blankform"
+        description="Choose from 100 ATS-friendly and executive CV templates. Customize career summaries, work experience, and top colors in your browser, then export to PDF/PNG instantly without registration."
+        canonicalUrl="https://blankform.com/cv"
+      />
       <Header />
 
       <AdPageWrapper>
         <main className="layout-page" style={{ paddingTop: '24px' }}>
-          {/* Page Title & Search Bar */}
+          {/* Page Title & SEO Intro Copy */}
           <div style={{ marginBottom: '32px' }}>
-            <h1 style={{ fontSize: '32px', marginBottom: '8px' }}>
-              Free CV &amp; Resume Templates (100 Designs)
+            <h1 style={{ fontSize: '32px', fontWeight: 700, marginBottom: '12px', color: 'var(--ink)' }}>
+              Free CV &amp; Resume Templates
             </h1>
-            <p className="text-subtle" style={{ maxWidth: '640px', marginBottom: '20px' }}>
-              Browse 100 ATS-friendly and executive CV templates. Customize text, photos, and top colors in your browser, then export to PDF/PNG instantly.
+            <p className="text-subtle" style={{ maxWidth: '780px', marginBottom: '20px', lineHeight: 1.65, fontSize: '15px' }}>
+              Build a professional CV or resume in minutes using our free templates. Whether you need a single-column ATS-friendly resume for corporate job applications, an executive two-column layout for senior roles, an academic Curriculum Vitae for research, or an entry-level resume for students, Blankform provides 100 machine-readable designs. Customize text, photos, and colors live in your browser, then export to crisp PDF or PNG format with zero watermarks.
             </p>
 
             {/* Live Search Input */}
-            <div style={{ maxWidth: '400px', marginBottom: '20px' }}>
+            <div style={{ maxWidth: '440px', marginBottom: '20px' }}>
               <input
                 type="text"
                 className="form-input"

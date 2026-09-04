@@ -4,6 +4,7 @@ import { Footer } from '../components/Footer';
 import { TemplateCard } from '../components/TemplateCard';
 import { AdSlot } from '../components/AdSlot';
 import { AdPageWrapper } from '../components/AdPageWrapper';
+import { SEO } from '../components/SEO';
 import { CERTIFICATE_TEMPLATES } from '../templates';
 
 const CATEGORIES = [
@@ -30,21 +31,26 @@ export function CertificateGallery() {
 
   return (
     <div>
+      <SEO 
+        title="Free Certificate Maker — No Sign Up Required | Blankform"
+        description="Choose from 100 free certificate templates. Fill in recipient details, customized titles, and signatures, then download as high-res PDF or PNG instantly — no account, no watermark."
+        canonicalUrl="https://blankform.com/certificate"
+      />
       <Header />
 
       <AdPageWrapper>
         <main className="layout-page" style={{ paddingTop: '24px' }}>
-          {/* Page Title & Search Bar */}
+          {/* Page Title & SEO Intro Copy */}
           <div style={{ marginBottom: '32px' }}>
-            <h1 style={{ fontSize: '32px', marginBottom: '8px' }}>
-              Free Certificate Templates (100 Designs)
+            <h1 style={{ fontSize: '32px', fontWeight: 700, marginBottom: '12px', color: 'var(--ink)' }}>
+              Free Certificate Templates
             </h1>
-            <p className="text-subtle" style={{ maxWidth: '640px', marginBottom: '20px' }}>
-              Choose from 100 client-side certificate templates. Edit live, customize text &amp; signatures, and export pixel-perfect PDF/PNG files with zero watermark.
+            <p className="text-subtle" style={{ maxWidth: '780px', marginBottom: '20px', lineHeight: 1.65, fontSize: '15px' }}>
+              Create a professional certificate in minutes using one of our free templates. Whether you need a certificate of completion for a course, an achievement award for a student, a recognition certificate for an employee, or a sports championship diploma, Blankform lets you fill in the details and download instantly. There’s no account required, no watermark, and nothing you create is stored — everything happens directly inside your browser.
             </p>
 
             {/* Live Search Input */}
-            <div style={{ maxWidth: '400px', marginBottom: '20px' }}>
+            <div style={{ maxWidth: '440px', marginBottom: '20px' }}>
               <input
                 type="text"
                 className="form-input"

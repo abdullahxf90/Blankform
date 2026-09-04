@@ -2,7 +2,7 @@
  * Complete Template Library Generator
  * Exactly 100 Certificates (10 categories x 10 templates)
  * Exactly 100 CVs / Resumes (10 categories x 10 templates)
- * Each template has distinct styling, typography, borders, and layout properties.
+ * Each template has distinct styling, typography, borders, layout properties, descriptive SEO slugs, and unique 100-150 word SEO intro copy.
  */
 
 // BORDER STYLES & FONTS FOR CERTIFICATES
@@ -348,16 +348,25 @@ export function generate100Certificates() {
       const font = CERT_FONTS[index % CERT_FONTS.length];
       const palette = CERT_PALETTES[index % CERT_PALETTES.length];
       const borderStyle = BORDER_STYLES[index % BORDER_STYLES.length];
-      const id = `cv-${index}-${item.name.toLowerCase().replace(/[^a-z0-9]/g, '-')}`;
+      const slug = item.name.toLowerCase().replace(/[^a-z0-9]/g, '-');
+      const id = `cert-${index}-${slug}`;
+
+      // Unique 100-150 word SEO Intro text per template landing page
+      const seoIntro = `Create a professional ${item.name} Certificate in minutes using our free ${cat.category} template. Specially designed for institutions, businesses, academies, and event organizers, this template features a ${item.desc.toLowerCase()} Customizing your award is simple: edit the recipient's name, certificate title, issuer organization, dates, and signee details live in your browser. With Blankform, there are no mandatory sign-ups, no hidden paywalls, and zero watermarks on exported files. All document rendering is performed client-side on your device for absolute privacy. Download your high-resolution PDF or PNG file instantly and print with complete confidence.`;
 
       list.push({
-        id: `cert-${index}-${item.name.toLowerCase().replace(/[^a-z0-9]/g, '-')}`,
-        title: item.name,
+        id,
+        slug,
+        title: `${item.name} Certificate Template`,
+        rawName: item.name,
         type: 'certificate',
         orientation: 'landscape',
         aspectRatio: 1.414,
         category: cat.category,
         description: item.desc,
+        seoIntro,
+        metaTitle: `${item.name} Certificate Template — Free & Printable | Blankform`,
+        metaDescription: `Free ${item.name.toLowerCase()} certificate template. Customize recipient name, course, date, and signatures, then export high-res PDF or PNG instantly without signup.`,
         styling: {
           primaryColor: palette.primary,
           accentColor: palette.accent,
@@ -394,7 +403,8 @@ export function generate100Cvs() {
   CV_SPECS.forEach(cat => {
     cat.items.forEach(item => {
       index++;
-      const id = `cv-${index}-${item.name.toLowerCase().replace(/[^a-z0-9]/g, '-')}`;
+      const slug = item.name.toLowerCase().replace(/[^a-z0-9]/g, '-');
+      const id = `cv-${index}-${slug}`;
       
       let layout = 'single-column';
       let hasColoredHeader = false;
@@ -412,14 +422,22 @@ export function generate100Cvs() {
         hasPhoto = true;
       }
 
+      // Unique 100-150 word SEO Intro text per CV template landing page
+      const seoIntro = `Build an outstanding ${item.name} CV using our free ${cat.category} resume template. Tailored specifically for job seekers, executives, researchers, and students, this layout provides a ${item.desc.toLowerCase()} Designed with machine-readable formatting, it parses cleanly in Applicant Tracking Systems (ATS) while presenting a polished visual hierarchy to hiring managers. Personalize your contact information, career summary, work experience bullet points, education, and skills in real-time. Blankform requires no account registration and never stores your personal career data on external servers. Generate and download your print-ready PDF or PNG file instantly.`;
+
       list.push({
         id,
-        title: item.name,
+        slug,
+        title: `${item.name} CV & Resume Template`,
+        rawName: item.name,
         type: 'cv',
         orientation: 'portrait',
         aspectRatio: 0.707,
         category: cat.category,
         description: item.desc,
+        seoIntro,
+        metaTitle: `${item.name} Resume Template — Free Download | Blankform`,
+        metaDescription: `Free ${item.name.toLowerCase()} resume template. ATS-friendly formatting, editable online without sign up. Export crisp vector PDF or PNG instantly.`,
         styling: {
           primaryColor: '#1C1D1F',
           accentColor: hasColoredHeader ? (index % 2 === 0 ? '#1E4A3D' : '#0F2C59') : '#5B5D63',
