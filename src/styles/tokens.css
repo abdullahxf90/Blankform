@@ -494,7 +494,7 @@ a:hover {
   display: block;
 }
 
-@media (max-width: 1380px) {
+@media (max-width: 1024px) {
   .skyscraper-ad-left, .skyscraper-ad-right {
     display: none !important;
   }
