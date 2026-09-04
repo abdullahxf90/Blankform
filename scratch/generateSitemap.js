@@ -3,7 +3,9 @@ import path from 'path';
 import { CERTIFICATE_TEMPLATES, CV_TEMPLATES } from '../src/templates/index.js';
 import { GUIDES_DATA } from '../src/data/guidesData.js';
 
-const baseUrl = 'https://blankform.com';
+// Read domain from command line argument if provided, e.g. node scratch/generateSitemap.js https://blankform.vercel.app
+const rawBaseUrl = process.argv[2] || 'https://blankform.com';
+const baseUrl = rawBaseUrl.replace(/\/$/, '');
 const lastMod = new Date().toISOString().split('T')[0];
 
 let urls = [
@@ -46,4 +48,4 @@ urls.forEach(item => {
 xml += `</urlset>`;
 
 fs.writeFileSync(path.resolve('./public/sitemap.xml'), xml, 'utf8');
-console.log(`Successfully generated sitemap.xml with ${urls.length} URLs!`);
+console.log(`Successfully generated sitemap.xml for domain [${baseUrl}] with ${urls.length} URLs!`);
