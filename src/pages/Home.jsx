@@ -30,14 +30,14 @@ export function Home() {
       <Header />
 
       <AdPageWrapper>
-        <main style={{ paddingTop: '40px', paddingBottom: '64px' }}>
-          {/* Hero Section */}
-          <section style={{ maxWidth: '680px', marginBottom: '48px' }}>
+        <main style={{ paddingTop: '32px', paddingBottom: '64px' }}>
+          {/* 1. Hero Section */}
+          <section style={{ maxWidth: '720px', marginBottom: '32px' }}>
             <h1 style={{ marginBottom: '16px', fontSize: '38px', letterSpacing: '-0.02em', color: 'var(--ink)' }}>
               Make a certificate or CV in a few minutes.
             </h1>
-            <p style={{ fontSize: '18px', color: 'var(--graphite)', marginBottom: '32px', lineHeight: 1.5 }}>
-              No sign up required. No watermarks. Nothing saved or uploaded to a server.
+            <p style={{ fontSize: '18px', color: 'var(--graphite)', marginBottom: '28px', lineHeight: 1.5 }}>
+              No sign up required. No watermarks. 100% private &amp; processed inside your browser.
             </p>
             <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
               <a href="/certificate" className="btn btn-primary">
@@ -49,15 +49,18 @@ export function Home() {
             </div>
           </section>
 
-          {/* Two Tool Content Blocks Side by Side */}
-          <section style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '32px', marginBottom: '48px' }}>
+          {/* 2. Top Hero Horizontal Ad Space Banner */}
+          <AdSlot format="category-divider" adIndex={0} label="HOME HERO AD BANNER (728 × 90)" />
+
+          {/* 3. Two Tool Content Blocks Side by Side */}
+          <section style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '32px', margin: '40px 0' }}>
             {/* Certificate Block */}
-            <div style={{ border: '1px solid var(--line)', borderRadius: 'var(--border-radius)', padding: '32px', backgroundColor: 'var(--paper-alt)' }}>
+            <div style={{ border: '1px solid var(--line)', borderRadius: 'var(--border-radius)', padding: '28px', backgroundColor: 'var(--paper-alt)' }}>
               <h2 style={{ fontSize: '24px', marginBottom: '8px' }}>Certificate Generator</h2>
-              <p style={{ color: 'var(--graphite)', marginBottom: '24px', fontSize: '15px' }}>
+              <p style={{ color: 'var(--graphite)', marginBottom: '20px', fontSize: '15px' }}>
                 Choose from 100 distinct award, diploma, and completion certificate templates with instant PDF &amp; PNG exports.
               </p>
-              <div style={{ height: '200px', backgroundColor: '#FFFFFF', border: '1px solid var(--line)', borderRadius: 'var(--border-radius)', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '24px' }}>
+              <div style={{ height: '190px', backgroundColor: '#FFFFFF', border: '1px solid var(--line)', borderRadius: 'var(--border-radius)', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
                 <div style={{ transform: 'scale(0.25)', transformOrigin: 'center center', pointerEvents: 'none' }}>
                   <DocumentRenderer template={sampleCert} fields={sampleCert.defaultFields} />
                 </div>
@@ -68,12 +71,12 @@ export function Home() {
             </div>
 
             {/* CV Block */}
-            <div style={{ border: '1px solid var(--line)', borderRadius: 'var(--border-radius)', padding: '32px', backgroundColor: 'var(--paper-alt)' }}>
+            <div style={{ border: '1px solid var(--line)', borderRadius: 'var(--border-radius)', padding: '28px', backgroundColor: 'var(--paper-alt)' }}>
               <h2 style={{ fontSize: '24px', marginBottom: '8px' }}>CV &amp; Resume Generator</h2>
-              <p style={{ color: 'var(--graphite)', marginBottom: '24px', fontSize: '15px' }}>
+              <p style={{ color: 'var(--graphite)', marginBottom: '20px', fontSize: '15px' }}>
                 Build 100 single-page or multi-column ATS-ready resumes with customizable top colors and photo uploads.
               </p>
-              <div style={{ height: '200px', backgroundColor: '#FFFFFF', border: '1px solid var(--line)', borderRadius: 'var(--border-radius)', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '24px' }}>
+              <div style={{ height: '190px', backgroundColor: '#FFFFFF', border: '1px solid var(--line)', borderRadius: 'var(--border-radius)', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
                 <div style={{ transform: 'scale(0.2)', transformOrigin: 'center center', pointerEvents: 'none' }}>
                   <DocumentRenderer template={sampleCv} fields={sampleCv.defaultFields} />
                 </div>
@@ -84,8 +87,11 @@ export function Home() {
             </div>
           </section>
 
-          {/* Horizontal Leaderboard Ad Space */}
-          <AdSlot format="category-divider" adIndex={0} label="728x90 Leaderboard Ad Space" />
+          {/* 4. Mid-Page In-Feed Ad Space Banner */}
+          <AdSlot format="sidebar" label="MID-PAGE SPONSOR BANNER (300 × 250)" />
+
+          {/* 5. Bottom Horizontal Leaderboard Ad Space */}
+          <AdSlot format="category-divider" adIndex={1} label="HOME BOTTOM LEADERBOARD BANNER (728 × 90)" />
         </main>
       </AdPageWrapper>
 
