@@ -1,87 +1,22 @@
 import React from 'react';
 
-// REAL EXTERNAL THIRD-PARTY SPONSORED ADVERTISEMENTS DATA
-const THIRD_PARTY_ADS = [
-  {
-    sponsor: 'NordVPN',
-    badge: 'NordVPN • 68% Off',
-    title: 'Secure Internet & Anti-Tracker',
-    desc: 'Protect 10 devices with high-speed VPN encryption.',
-    cta: 'Claim Deal',
-    url: 'https://nordvpn.com',
-    bg: '#F0FDF4',
-    accent: '#16A34A'
-  },
-  {
-    sponsor: 'Bluehost',
-    badge: 'Bluehost • Special Offer',
-    title: 'Launch Website for $2.95/mo',
-    desc: 'Free SSL, Free Domain Name, 24/7 Support.',
-    cta: 'Claim 70% Off',
-    url: 'https://bluehost.com',
-    bg: '#EFF6FF',
-    accent: '#2563EB'
-  },
-  {
-    sponsor: 'Coursera',
-    badge: 'Coursera • Sponsored',
-    title: 'Online Master Degrees',
-    desc: 'Earn accredited degrees from top global universities.',
-    cta: 'Explore Degrees',
-    url: 'https://coursera.org',
-    bg: '#FAF5FF',
-    accent: '#9333EA'
-  },
-  {
-    sponsor: 'Shopify',
-    badge: 'Shopify • $1/Mo Trial',
-    title: 'Start Your E-Commerce Store',
-    desc: 'Sell products online & accept global payments easily.',
-    cta: 'Start Free Trial',
-    url: 'https://shopify.com',
-    bg: '#ECFDF5',
-    accent: '#059669'
-  },
-  {
-    sponsor: 'Grammarly',
-    badge: 'Grammarly • Free Tool',
-    title: 'Write Flawless Proposals',
-    desc: 'Real-time tone & grammar assistance for Chrome.',
-    cta: 'Install Extension',
-    url: 'https://grammarly.com',
-    bg: '#FFF7ED',
-    accent: '#EA580C'
-  }
-];
+export function AdSlot({ format = 'category-divider', label = 'ADVERTISEMENT SPACE', adIndex = 0 }) {
+  const contactLink = "mailto:contact@blankform.com?subject=Advertising%20Inquiry%20on%20Blankform";
 
-export function AdSlot({ format = 'category-divider', label = 'ADVERTISEMENT', adIndex = 0 }) {
-  const ad = THIRD_PARTY_ADS[adIndex % THIRD_PARTY_ADS.length];
-
-  const advertiseHeader = (
-    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '4px' }}>
-      <span style={{ fontSize: '10px', color: '#64748B', fontWeight: 700, letterSpacing: '0.05em' }}>{label}</span>
-      <a 
-        href="mailto:contact@blankform.com?subject=Advertising%20Inquiry%20on%20Blankform" 
-        style={{ fontSize: '10px', color: '#2563EB', fontWeight: 600, textDecoration: 'none' }}
-        title="Contact us to advertise your product here"
-      >
-        📢 Advertise Here →
-      </a>
-    </div>
-  );
-
-  // 1. Skyscraper 160x600 Left & Right Sticky Side Ad
+  // 1. Skyscraper 160x600 Left & Right Sticky Side Ad Space
   if (format === 'skyscraper') {
     return (
       <div className="ad-slot-container" style={{ margin: 0, position: 'sticky', top: '80px' }}>
-        {advertiseHeader}
+        <div style={{ fontSize: '10px', color: '#64748B', fontWeight: 700, marginBottom: '4px', textAlign: 'center' }}>
+          {label} (160 × 600)
+        </div>
         <div 
           className="ad-box" 
           style={{ 
             width: '160px', 
             height: '480px', 
-            backgroundColor: ad.bg, 
-            border: `1px solid ${ad.accent}`, 
+            backgroundColor: '#F8FAFC', 
+            border: '2px dashed #94A3B8', 
             borderRadius: '6px', 
             display: 'flex', 
             flexDirection: 'column', 
@@ -90,103 +25,147 @@ export function AdSlot({ format = 'category-divider', label = 'ADVERTISEMENT', a
             color: '#0F172A', 
             fontSize: '11px', 
             textAlign: 'center',
-            padding: '12px 10px',
+            padding: '16px 12px',
             boxSizing: 'border-box'
           }}
         >
-          <span style={{ fontSize: '9px', fontWeight: 700, color: ad.accent, textTransform: 'uppercase' }}>
-            {ad.badge}
+          <span style={{ fontSize: '10px', fontWeight: 700, color: '#2563EB', textTransform: 'uppercase', backgroundColor: '#EFF6FF', padding: '2px 8px', borderRadius: '4px' }}>
+            Available Space
           </span>
 
           <div>
-            <div style={{ fontWeight: 700, fontSize: '12px', color: '#0F172A', marginBottom: '6px', lineHeight: 1.3 }}>
-              {ad.title}
+            <div style={{ fontWeight: 700, fontSize: '13px', color: '#0F172A', marginBottom: '6px' }}>
+              160 × 600 Skyscraper
             </div>
-            <div style={{ fontSize: '10px', color: '#475569', lineHeight: 1.3 }}>
-              {ad.desc}
+            <div style={{ fontSize: '11px', color: '#64748B', lineHeight: 1.4 }}>
+              Promote your product or brand to thousands of daily users.
             </div>
           </div>
 
           <a 
-            href={ad.url} 
-            target="_blank" 
-            rel="noopener noreferrer"
+            href={contactLink}
             style={{ 
-              backgroundColor: ad.accent, 
+              backgroundColor: '#2563EB', 
               color: '#FFFFFF', 
-              padding: '6px 10px', 
+              padding: '8px 10px', 
               borderRadius: '4px', 
-              fontSize: '10px', 
+              fontSize: '11px', 
               fontWeight: 600,
               textDecoration: 'none',
               width: '100%',
               boxSizing: 'border-box'
             }}
           >
-            {ad.cta} ↗
+            Sponsor Space ✉️
           </a>
         </div>
       </div>
     );
   }
 
-  // 2. Sidebar Form Compact Ad
+  // 2. Sidebar Form Compact 300x250 Ad Space
   if (format === 'sidebar') {
     return (
-      <div className="ad-slot-container" style={{ margin: '12px 0' }}>
-        {advertiseHeader}
-        <div className="ad-box" style={{ width: '100%', padding: '12px 14px', backgroundColor: ad.bg, border: `1px solid ${ad.accent}`, borderRadius: '6px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', boxSizing: 'border-box' }}>
-          <div style={{ marginBottom: '8px' }}>
-            <div style={{ fontSize: '9px', fontWeight: 700, color: ad.accent, textTransform: 'uppercase', marginBottom: '2px' }}>{ad.badge}</div>
-            <div style={{ fontSize: '13px', fontWeight: 700, color: '#0F172A', marginBottom: '2px' }}>{ad.title}</div>
-            <div style={{ fontSize: '11px', color: '#475569', lineHeight: 1.3 }}>{ad.desc}</div>
+      <div className="ad-slot-container" style={{ margin: '14px 0' }}>
+        <div style={{ fontSize: '10px', color: '#64748B', fontWeight: 700, marginBottom: '4px' }}>
+          {label} (300 × 250)
+        </div>
+        <div 
+          className="ad-box" 
+          style={{ 
+            width: '100%', 
+            padding: '14px 16px', 
+            backgroundColor: '#F8FAFC', 
+            border: '2px dashed #94A3B8', 
+            borderRadius: '6px', 
+            display: 'flex', 
+            flexDirection: 'column', 
+            justify: 'space-between', 
+            boxSizing: 'border-box' 
+          }}
+        >
+          <div style={{ marginBottom: '10px' }}>
+            <div style={{ fontSize: '10px', fontWeight: 700, color: '#2563EB', textTransform: 'uppercase', marginBottom: '4px' }}>
+              Reserve This Spot
+            </div>
+            <div style={{ fontSize: '13px', fontWeight: 700, color: '#0F172A', marginBottom: '2px' }}>
+              300 × 250 Sidebar Banner Space
+            </div>
+            <div style={{ fontSize: '11px', color: '#64748B' }}>
+              Target active document creators with high-visibility placement.
+            </div>
           </div>
-          <a href={ad.url} target="_blank" rel="noopener noreferrer" style={{ backgroundColor: ad.accent, color: '#FFFFFF', padding: '5px 12px', borderRadius: '4px', textAlign: 'center', textDecoration: 'none', fontWeight: 600, fontSize: '11px', display: 'inline-block' }}>
-            {ad.cta} ↗
+          <a 
+            href={contactLink} 
+            style={{ 
+              backgroundColor: '#2563EB', 
+              color: '#FFFFFF', 
+              padding: '6px 14px', 
+              borderRadius: '4px', 
+              textAlign: 'center', 
+              textDecoration: 'none', 
+              fontWeight: 600, 
+              fontSize: '11px', 
+              display: 'inline-block' 
+            }}
+          >
+            Advertise Here ✉️
           </a>
         </div>
       </div>
     );
   }
 
-  // 3. Compact Horizontal Category-Divider Banner
+  // 3. Compact Horizontal Category-Divider Banner Space (728x90 / 970x90 Equivalent)
   return (
     <div className="ad-slot-container" style={{ margin: '20px 0', width: '100%' }}>
-      {advertiseHeader}
+      <div style={{ fontSize: '10px', color: '#64748B', fontWeight: 700, marginBottom: '4px' }}>
+        {label} (728 × 90 LEADERBOARD SPACE)
+      </div>
       <div 
         className="ad-box" 
         style={{ 
           width: '100%', 
-          backgroundColor: ad.bg, 
-          border: `1px solid ${ad.accent}`, 
+          backgroundColor: '#F8FAFC', 
+          border: '2px dashed #94A3B8', 
           borderRadius: '6px', 
-          padding: '10px 16px', 
+          padding: '12px 18px', 
           display: 'flex', 
           alignItems: 'center', 
           justify: 'space-between', 
-          gap: '14px', 
+          gap: '16px', 
           boxSizing: 'border-box',
-          boxShadow: '0 1px 4px rgba(0,0,0,0.03)',
           flexWrap: 'wrap'
         }}
       >
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flex: 1, minWidth: '240px' }}>
-          <span style={{ backgroundColor: ad.accent, color: '#FFFFFF', padding: '3px 8px', borderRadius: '3px', fontSize: '10px', fontWeight: 700, textTransform: 'uppercase', whiteSpace: 'nowrap' }}>
-            {ad.badge}
+          <span style={{ backgroundColor: '#EFF6FF', color: '#2563EB', border: '1px solid #BFDBFE', padding: '4px 10px', borderRadius: '4px', fontSize: '10px', fontWeight: 700, textTransform: 'uppercase', whiteSpace: 'nowrap' }}>
+            Available Ad Space
           </span>
           <div>
-            <div style={{ fontSize: '13px', fontWeight: 700, color: '#0F172A' }}>{ad.title}</div>
-            <div style={{ fontSize: '11px', color: '#475569' }}>{ad.desc}</div>
+            <div style={{ fontSize: '13px', fontWeight: 700, color: '#0F172A' }}>
+              728 × 90 Horizontal Banner Location
+            </div>
+            <div style={{ fontSize: '11px', color: '#64748B' }}>
+              Reach thousands of students, teachers, and professionals creating documents daily.
+            </div>
           </div>
         </div>
 
         <a 
-          href={ad.url} 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          style={{ backgroundColor: ad.accent, borderColor: ad.accent, whiteSpace: 'nowrap', textDecoration: 'none', color: '#FFFFFF', fontWeight: 600, padding: '6px 14px', borderRadius: '4px', fontSize: '11px' }}
+          href={contactLink} 
+          style={{ 
+            backgroundColor: '#2563EB', 
+            color: '#FFFFFF', 
+            whiteSpace: 'nowrap', 
+            textDecoration: 'none', 
+            fontWeight: 600, 
+            padding: '7px 16px', 
+            borderRadius: '4px', 
+            fontSize: '11px' 
+          }}
         >
-          {ad.cta} ↗
+          Sponsor This Banner ✉️
         </a>
       </div>
     </div>

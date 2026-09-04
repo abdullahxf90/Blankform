@@ -5,6 +5,8 @@ export function AdPopups() {
   const [showBottomAd, setShowBottomAd] = useState(false);
   const [showModalAd, setShowModalAd] = useState(false);
 
+  const contactLink = "mailto:contact@blankform.com?subject=Advertising%20Inquiry%20on%20Blankform";
+
   // Staggered timing sequence:
   // 15 sec -> Top Banner
   // 30 sec -> Bottom Banner
@@ -34,7 +36,7 @@ export function AdPopups() {
 
   return (
     <>
-      {/* 1. TOP STICKY POPUP AD BANNER (NORDVPN) WITH CLOSE BUTTON */}
+      {/* 1. TOP STICKY POPUP AD BANNER (AVAILABLE SPONSOR SPOT) */}
       {showTopAd && (
         <div
           style={{
@@ -49,28 +51,26 @@ export function AdPopups() {
             boxSizing: 'border-box',
             display: 'flex',
             alignItems: 'center',
-            justifyContent: 'space-between',
+            justify: 'space-between',
             boxShadow: '0 2px 10px rgba(0,0,0,0.2)',
             fontSize: '13px',
             animation: 'fadeIn 0.3s ease-in'
           }}
         >
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flex: 1, overflow: 'hidden' }}>
-            <span style={{ backgroundColor: '#16A34A', color: '#FFFFFF', padding: '2px 8px', borderRadius: '3px', fontSize: '11px', fontWeight: 700, textTransform: 'uppercase' }}>
-              NordVPN • Ad
+            <span style={{ backgroundColor: '#2563EB', color: '#FFFFFF', padding: '2px 8px', borderRadius: '3px', fontSize: '11px', fontWeight: 700, textTransform: 'uppercase' }}>
+              Ad Space Available
             </span>
             <span style={{ fontWeight: 500, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-              🔒 Protect Your Privacy &amp; Encrypt Up to 10 Devices — 68% Off Limited Special Offer
+              📢 Top Sticky Banner Spot (100% Width) — Contact us to promote your service here.
             </span>
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexShrink: 0 }}>
             <a
-              href="https://nordvpn.com"
-              target="_blank"
-              rel="noopener noreferrer"
+              href={contactLink}
               style={{
-                backgroundColor: '#16A34A',
+                backgroundColor: '#2563EB',
                 color: '#FFFFFF',
                 border: 'none',
                 padding: '4px 14px',
@@ -80,7 +80,7 @@ export function AdPopups() {
                 textDecoration: 'none'
               }}
             >
-              Get NordVPN Deal ↗
+              Sponsor This Space ✉️
             </a>
             <button
               type="button"
@@ -94,7 +94,7 @@ export function AdPopups() {
                 cursor: 'pointer',
                 padding: '2px 6px'
               }}
-              title="Close advertisement"
+              title="Close placeholder"
             >
               ✕
             </button>
@@ -102,7 +102,7 @@ export function AdPopups() {
         </div>
       )}
 
-      {/* 2. BOTTOM STICKY POPUP AD BANNER (BLUEHOST) WITH CLOSE BUTTON */}
+      {/* 2. BOTTOM STICKY POPUP AD BANNER (AVAILABLE SPONSOR SPOT) */}
       {showBottomAd && (
         <div
           style={{
@@ -117,29 +117,27 @@ export function AdPopups() {
             boxSizing: 'border-box',
             display: 'flex',
             alignItems: 'center',
-            justifyContent: 'space-between',
+            justify: 'space-between',
             boxShadow: '0 -2px 12px rgba(0,0,0,0.25)',
             borderTop: '1px solid #334155',
             animation: 'fadeIn 0.3s ease-in'
           }}
         >
           <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
-            <div style={{ backgroundColor: '#2563EB', color: '#FFFFFF', padding: '6px 12px', borderRadius: '4px', fontWeight: 700, fontSize: '12px' }}>
-              Bluehost
+            <div style={{ backgroundColor: '#16A34A', color: '#FFFFFF', padding: '6px 12px', borderRadius: '4px', fontWeight: 700, fontSize: '12px' }}>
+              Available Space
             </div>
             <div>
-              <div style={{ fontSize: '14px', fontWeight: 600 }}>Launch Your Business Website for $2.95/mo</div>
-              <div style={{ fontSize: '12px', color: '#94A3B8' }}>Includes Free Domain Name, Free SSL Certificate, &amp; 24/7 Expert Support.</div>
+              <div style={{ fontSize: '14px', fontWeight: 600 }}>Bottom Sticky Banner Spot — Reserved for Advertisers</div>
+              <div style={{ fontSize: '12px', color: '#94A3B8' }}>High-visibility placement seen by thousands of daily users.</div>
             </div>
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
             <a
-              href="https://bluehost.com"
-              target="_blank"
-              rel="noopener noreferrer"
+              href={contactLink}
               style={{
-                backgroundColor: '#2563EB',
+                backgroundColor: '#16A34A',
                 color: '#FFFFFF',
                 border: 'none',
                 padding: '6px 16px',
@@ -149,7 +147,7 @@ export function AdPopups() {
                 textDecoration: 'none'
               }}
             >
-              Claim 70% Off ↗
+              Advertise Here ✉️
             </a>
             <button
               type="button"
@@ -163,7 +161,7 @@ export function AdPopups() {
                 cursor: 'pointer',
                 padding: '2px 8px'
               }}
-              title="Close advertisement"
+              title="Close placeholder"
             >
               ✕
             </button>
@@ -171,7 +169,7 @@ export function AdPopups() {
         </div>
       )}
 
-      {/* 3. CENTER 50% SCREEN MODAL POPUP AD (COURSERA) WITH CLOSE BUTTON */}
+      {/* 3. CENTER 50% SCREEN MODAL POPUP AD (AVAILABLE SPONSOR SPOT) */}
       {showModalAd && (
         <div
           style={{
@@ -182,7 +180,7 @@ export function AdPopups() {
             zIndex: 10000,
             display: 'flex',
             alignItems: 'center',
-            justifyContent: 'center',
+            justify: 'center',
             padding: '20px',
             animation: 'fadeIn 0.3s ease-in'
           }}
@@ -191,9 +189,9 @@ export function AdPopups() {
             style={{
               width: '50vw',
               minWidth: '320px',
-              maxWidth: '620px',
-              height: '50vh',
-              minHeight: '340px',
+              maxWidth: '600px',
+              height: '45vh',
+              minHeight: '320px',
               backgroundColor: '#FFFFFF',
               borderRadius: '12px',
               boxShadow: '0 20px 40px rgba(0,0,0,0.3)',
@@ -203,7 +201,7 @@ export function AdPopups() {
               justify: 'space-between',
               padding: '28px',
               boxSizing: 'border-box',
-              border: '2px solid #E2E8F0',
+              border: '2px dashed #94A3B8',
               overflow: 'hidden'
             }}
           >
@@ -226,8 +224,7 @@ export function AdPopups() {
                 cursor: 'pointer',
                 display: 'flex',
                 alignItems: 'center',
-                justify: 'center',
-                transition: 'background-color 0.15s ease'
+                justify: 'center'
               }}
               title="Close Popup"
             >
@@ -236,22 +233,22 @@ export function AdPopups() {
 
             {/* Modal Body */}
             <div>
-              <div style={{ display: 'inline-block', backgroundColor: '#FAF5FF', color: '#9333EA', fontSize: '11px', fontWeight: 700, padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', marginBottom: '12px', letterSpacing: '0.05em' }}>
-                SPONSORED BY COURSERA GLOBAL DEGREES
+              <div style={{ display: 'inline-block', backgroundColor: '#EFF6FF', color: '#2563EB', fontSize: '11px', fontWeight: 700, padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', marginBottom: '12px', letterSpacing: '0.05em' }}>
+                SPONSORSHIP OPPORTUNITY
               </div>
 
               <h2 style={{ fontSize: '24px', fontWeight: 700, color: '#0F172A', marginBottom: '12px', lineHeight: 1.2 }}>
-                Earn an Accredited Master Degree 100% Online
+                Advertise Your Product or Brand Here
               </h2>
 
               <p style={{ fontSize: '14px', lineHeight: 1.6, color: '#475569', marginBottom: '16px' }}>
-                Advance your career with world-class degrees in Data Science, Computer Science, and Business Administration from top global universities.
+                Blankform serves thousands of active job seekers, students, and professionals creating documents daily. Reserve this prime modal ad spot today.
               </p>
 
-              <div style={{ display: 'flex', gap: '16px', fontSize: '13px', color: '#16A34A', fontWeight: 600 }}>
-                <span>✓ Top 10 Universities</span>
-                <span>✓ Flexible Schedules</span>
-                <span>✓ Financial Aid Available</span>
+              <div style={{ display: 'flex', gap: '16px', fontSize: '13px', color: '#2563EB', fontWeight: 600 }}>
+                <span>✓ Prime Modal Placement</span>
+                <span>✓ High CTR Opportunity</span>
+                <span>✓ Custom Branding</span>
               </div>
             </div>
 
@@ -266,13 +263,11 @@ export function AdPopups() {
                 Close &amp; Continue
               </button>
               <a
-                href="https://coursera.org"
-                target="_blank"
-                rel="noopener noreferrer"
+                href={contactLink}
                 className="btn btn-primary"
-                style={{ padding: '8px 20px', fontSize: '13px', backgroundColor: '#9333EA', borderColor: '#9333EA', textDecoration: 'none', color: '#FFFFFF', fontWeight: 600 }}
+                style={{ padding: '8px 20px', fontSize: '13px', backgroundColor: '#2563EB', borderColor: '#2563EB', textDecoration: 'none', color: '#FFFFFF', fontWeight: 600 }}
               >
-                Explore Degrees ↗
+                Contact to Advertise ✉️
               </a>
             </div>
           </div>
