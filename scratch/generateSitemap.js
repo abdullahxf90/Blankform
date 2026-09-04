@@ -6,7 +6,7 @@ import { COMPARISONS_DATA } from '../src/data/comparisonsData.js';
 import { OCCUPATIONS_DATA } from '../src/data/occupationsData.js';
 
 // Read domain from command line argument if provided
-const rawBaseUrl = process.argv[2] || 'https://blankform.vercel.app';
+const rawBaseUrl = process.argv[2] || 'https://blankform.abdullah-xf90.workers.dev';
 const baseUrl = rawBaseUrl.replace(/\/$/, '');
 const lastMod = new Date().toISOString().split('T')[0];
 

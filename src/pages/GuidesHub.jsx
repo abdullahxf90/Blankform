@@ -12,7 +12,7 @@ export function GuidesHub() {
       <SEO 
         title="Guides & Career Resources — Blankform"
         description="Free guides on resume formatting, ATS optimization, certificate wording examples, and career advice. Learn how to craft winning documents with Blankform."
-        canonicalUrl="https://blankform.vercel.app/guides"
+        canonicalUrl="https://blankform.abdullah-xf90.workers.dev/guides"
       />
       <Header />
 

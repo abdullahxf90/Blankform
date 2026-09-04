@@ -15,7 +15,7 @@ export function Home() {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     'name': 'Blankform',
-    'url': 'https://blankform.vercel.app',
+    'url': 'https://blankform.abdullah-xf90.workers.dev',
     'description': 'Free certificate and CV maker, no sign up required.'
   };
 
@@ -24,7 +24,7 @@ export function Home() {
       <SEO 
         title="Blankform — Free Certificate & CV Maker, No Sign Up"
         description="Create certificates and CVs for free. No sign up, no watermark, and nothing you type is saved or sent to a server. Pick a template and download instantly."
-        canonicalUrl="https://blankform.vercel.app/"
+        canonicalUrl="https://blankform.abdullah-xf90.workers.dev/"
         schemaData={websiteSchema}
       />
       <Header />

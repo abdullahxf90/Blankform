@@ -23,12 +23,12 @@ export function ComparisonDetail({ slug }) {
       'name': 'Blankform',
       'logo': {
         '@type': 'ImageObject',
-        'url': 'https://blankform.vercel.app/favicon.svg'
+        'url': 'https://blankform.abdullah-xf90.workers.dev/favicon.svg'
       }
     },
     'mainEntityOfPage': {
       '@type': 'WebPage',
-      '@id': `https://blankform.vercel.app/compare/${comp.slug}`
+      '@id': `https://blankform.abdullah-xf90.workers.dev/compare/${comp.slug}`
     }
   };
 
@@ -78,7 +78,7 @@ export function ComparisonDetail({ slug }) {
       <SEO 
         title={comp.metaTitle}
         description={comp.metaDescription}
-        canonicalUrl={`https://blankform.vercel.app/compare/${comp.slug}`}
+        canonicalUrl={`https://blankform.abdullah-xf90.workers.dev/compare/${comp.slug}`}
         type="article"
         schemaData={articleSchema}
       />

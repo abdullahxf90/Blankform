@@ -19,7 +19,7 @@ export function OccupationLanding({ slug }) {
       <SEO 
         title={occ.metaTitle}
         description={occ.metaDescription}
-        canonicalUrl={`https://blankform.vercel.app/${isCv ? 'resume-for' : 'certificate-for'}/${occ.slug}`}
+        canonicalUrl={`https://blankform.abdullah-xf90.workers.dev/${isCv ? 'resume-for' : 'certificate-for'}/${occ.slug}`}
       />
       <Header />
 

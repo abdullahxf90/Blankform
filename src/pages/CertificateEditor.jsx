@@ -51,7 +51,7 @@ export function CertificateEditor({ templateId }) {
       <SEO
         title={template.metaTitle || `${template.title} — Free & Printable | Blankform`}
         description={template.metaDescription || template.description}
-        canonicalUrl={`https://blankform.vercel.app/certificate/${template.slug || template.id}`}
+        canonicalUrl={`https://blankform.abdullah-xf90.workers.dev/certificate/${template.slug || template.id}`}
         schemaData={schemaData}
       />
       <Header />

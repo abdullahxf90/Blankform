@@ -12,7 +12,7 @@ export function ComparisonsHub() {
       <SEO 
         title="Blankform Alternatives & Competitor Comparisons"
         description="See how Blankform compares to Canva, Zety, Novoresume, and Resume.io. 100% free document generator, no sign up, no watermark."
-        canonicalUrl="https://blankform.vercel.app/compare"
+        canonicalUrl="https://blankform.abdullah-xf90.workers.dev/compare"
       />
       <Header />
 

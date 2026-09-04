@@ -1,5 +1,4 @@
-# Blankform robots.txt
 User-agent: *
 Allow: /
 
-Sitemap: https://blankform.vercel.app/sitemap.xml
+Sitemap: https://blankform.abdullah-xf90.workers.dev/sitemap.xml
