@@ -6,6 +6,9 @@ import { CvGallery } from './pages/CvGallery';
 import { CvEditor } from './pages/CvEditor';
 import { GuidesHub } from './pages/GuidesHub';
 import { GuideDetail } from './pages/GuideDetail';
+import { ComparisonsHub } from './pages/ComparisonsHub';
+import { ComparisonDetail } from './pages/ComparisonDetail';
+import { OccupationLanding } from './pages/OccupationLanding';
 import { About } from './pages/About';
 import { Privacy } from './pages/Privacy';
 import { NotFound } from './pages/NotFound';
@@ -73,6 +76,25 @@ export function App() {
     if (path.startsWith('/guides/')) {
       const slug = path.split('/guides/')[1];
       return <GuideDetail slug={slug} />;
+    }
+
+    if (path === '/compare') {
+      return <ComparisonsHub />;
+    }
+
+    if (path.startsWith('/compare/')) {
+      const slug = path.split('/compare/')[1];
+      return <ComparisonDetail slug={slug} />;
+    }
+
+    if (path.startsWith('/resume-for/')) {
+      const slug = path.split('/resume-for/')[1];
+      return <OccupationLanding slug={slug} />;
+    }
+
+    if (path.startsWith('/certificate-for/')) {
+      const slug = path.split('/certificate-for/')[1];
+      return <OccupationLanding slug={slug} />;
     }
 
     if (path === '/about') {

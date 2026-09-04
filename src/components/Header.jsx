@@ -12,6 +12,7 @@ export function Header({ activeTool = null, showCrossLink = false }) {
             <a href="/certificate" style={{ textDecoration: 'none', color: 'var(--ink)' }}>Certificates</a>
             <a href="/cv" style={{ textDecoration: 'none', color: 'var(--ink)' }}>CVs &amp; Resumes</a>
             <a href="/guides" style={{ textDecoration: 'none', color: 'var(--graphite)' }}>Guides</a>
+            <a href="/compare" style={{ textDecoration: 'none', color: 'var(--graphite)' }}>Comparisons</a>
           </nav>
         </div>
 

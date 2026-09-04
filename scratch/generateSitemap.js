@@ -2,9 +2,11 @@ import fs from 'fs';
 import path from 'path';
 import { CERTIFICATE_TEMPLATES, CV_TEMPLATES } from '../src/templates/index.js';
 import { GUIDES_DATA } from '../src/data/guidesData.js';
+import { COMPARISONS_DATA } from '../src/data/comparisonsData.js';
+import { OCCUPATIONS_DATA } from '../src/data/occupationsData.js';
 
-// Read domain from command line argument if provided, e.g. node scratch/generateSitemap.js https://blankform.vercel.app
-const rawBaseUrl = process.argv[2] || 'https://blankform.com';
+// Read domain from command line argument if provided
+const rawBaseUrl = process.argv[2] || 'https://blankform.vercel.app';
 const baseUrl = rawBaseUrl.replace(/\/$/, '');
 const lastMod = new Date().toISOString().split('T')[0];
 
@@ -13,6 +15,7 @@ let urls = [
   { url: '/certificate', priority: '0.9', changefreq: 'daily' },
   { url: '/cv', priority: '0.9', changefreq: 'daily' },
   { url: '/guides', priority: '0.8', changefreq: 'weekly' },
+  { url: '/compare', priority: '0.8', changefreq: 'weekly' },
   { url: '/about', priority: '0.5', changefreq: 'monthly' },
   { url: '/privacy', priority: '0.3', changefreq: 'monthly' },
 ];
@@ -20,6 +23,17 @@ let urls = [
 // Add Guides
 GUIDES_DATA.forEach(g => {
   urls.push({ url: `/guides/${g.slug}`, priority: '0.8', changefreq: 'weekly' });
+});
+
+// Add Competitor Comparisons (Tier 5)
+COMPARISONS_DATA.forEach(c => {
+  urls.push({ url: `/compare/${c.slug}`, priority: '0.8', changefreq: 'weekly' });
+});
+
+// Add Occupation / Audience Variants (Tier 6)
+OCCUPATIONS_DATA.forEach(o => {
+  const prefix = o.type === 'cv' ? '/resume-for' : '/certificate-for';
+  urls.push({ url: `${prefix}/${o.slug}`, priority: '0.8', changefreq: 'weekly' });
 });
 
 // Add 100 Certificates
