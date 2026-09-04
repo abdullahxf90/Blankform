@@ -169,7 +169,7 @@ export function AdPopups() {
         </div>
       )}
 
-      {/* 3. CENTER 50% SCREEN MODAL POPUP AD (AVAILABLE SPONSOR SPOT) */}
+      {/* 3. CENTER 50% SCREEN MODAL POPUP AD (CENTER ALIGNED) */}
       {showModalAd && (
         <div
           style={{
@@ -189,19 +189,18 @@ export function AdPopups() {
             style={{
               width: '50vw',
               minWidth: '320px',
-              maxWidth: '600px',
-              height: '45vh',
-              minHeight: '320px',
+              maxWidth: '560px',
               backgroundColor: '#FFFFFF',
               borderRadius: '12px',
               boxShadow: '0 20px 40px rgba(0,0,0,0.3)',
               position: 'relative',
               display: 'flex',
               flexDirection: 'column',
-              justify: 'space-between',
-              padding: '28px',
+              alignItems: 'center',
+              textAlign: 'center',
+              padding: '32px 28px',
               boxSizing: 'border-box',
-              border: '2px dashed #94A3B8',
+              border: '2px dashed #2563EB',
               overflow: 'hidden'
             }}
           >
@@ -231,41 +230,41 @@ export function AdPopups() {
               ✕
             </button>
 
-            {/* Modal Body */}
-            <div>
-              <div style={{ display: 'inline-block', backgroundColor: '#EFF6FF', color: '#2563EB', fontSize: '11px', fontWeight: 700, padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', marginBottom: '12px', letterSpacing: '0.05em' }}>
+            {/* Centered Modal Content */}
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', width: '100%' }}>
+              <div style={{ display: 'inline-block', backgroundColor: '#EFF6FF', color: '#2563EB', fontSize: '11px', fontWeight: 800, padding: '4px 12px', borderRadius: '20px', textTransform: 'uppercase', marginBottom: '16px', letterSpacing: '0.05em' }}>
                 SPONSORSHIP OPPORTUNITY
               </div>
 
-              <h2 style={{ fontSize: '24px', fontWeight: 700, color: '#0F172A', marginBottom: '12px', lineHeight: 1.2 }}>
-                Advertise Your Product or Brand Here
+              <h2 style={{ fontSize: '24px', fontWeight: 800, color: '#0F172A', marginBottom: '12px', lineHeight: 1.2 }}>
+                Advertise Your Brand Here
               </h2>
 
-              <p style={{ fontSize: '14px', lineHeight: 1.6, color: '#475569', marginBottom: '16px' }}>
-                Blankform serves thousands of active job seekers, students, and professionals creating documents daily. Reserve this prime modal ad spot today.
+              <p style={{ fontSize: '14px', lineHeight: 1.6, color: '#475569', marginBottom: '20px', maxWidth: '440px' }}>
+                Blankform serves thousands of active job seekers, students, and professionals creating documents daily. Reserve this prime center modal ad spot.
               </p>
 
-              <div style={{ display: 'flex', gap: '16px', fontSize: '13px', color: '#2563EB', fontWeight: 600 }}>
-                <span>✓ Prime Modal Placement</span>
+              <div style={{ display: 'flex', gap: '16px', fontSize: '13px', color: '#2563EB', fontWeight: 700, justifyContent: 'center', flexWrap: 'wrap', marginBottom: '24px' }}>
+                <span>✓ Prime Placement</span>
                 <span>✓ High CTR Opportunity</span>
-                <span>✓ Custom Branding</span>
+                <span>✓ Direct Link</span>
               </div>
             </div>
 
-            {/* Modal Footer Controls */}
-            <div style={{ display: 'flex', gap: '12px', justifyContent: 'flex-end', paddingTop: '16px', borderTop: '1px solid #F1F5F9' }}>
+            {/* Centered Modal Action Controls */}
+            <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', width: '100%', paddingTop: '16px', borderTop: '1px solid #F1F5F9' }}>
               <button
                 type="button"
                 onClick={() => setShowModalAd(false)}
                 className="btn btn-secondary"
-                style={{ padding: '8px 16px', fontSize: '13px' }}
+                style={{ padding: '8px 18px', fontSize: '13px' }}
               >
                 Close &amp; Continue
               </button>
               <a
                 href={contactLink}
                 className="btn btn-primary"
-                style={{ padding: '8px 20px', fontSize: '13px', backgroundColor: '#2563EB', borderColor: '#2563EB', textDecoration: 'none', color: '#FFFFFF', fontWeight: 600 }}
+                style={{ padding: '8px 22px', fontSize: '13px', backgroundColor: '#2563EB', borderColor: '#2563EB', textDecoration: 'none', color: '#FFFFFF', fontWeight: 700 }}
               >
                 Contact to Advertise ✉️
               </a>
