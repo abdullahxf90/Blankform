@@ -1,17 +1,35 @@
 import React, { useState, useEffect } from 'react';
 
 export function AdPopups() {
-  const [showTopAd, setShowTopAd] = useState(true);
-  const [showBottomAd, setShowBottomAd] = useState(true);
+  const [showTopAd, setShowTopAd] = useState(false);
+  const [showBottomAd, setShowBottomAd] = useState(false);
   const [showModalAd, setShowModalAd] = useState(false);
 
-  // Show center 50% modal ad after 2 seconds automatically
+  // Staggered timing sequence:
+  // 15 sec -> Top Banner
+  // 30 sec -> Bottom Banner
+  // 45 sec -> Center 50% Modal Popup
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowModalAd(true);
-    }, 2000);
+    // 1. Show Top Banner after 15 seconds
+    const topTimer = setTimeout(() => {
+      setShowTopAd(true);
+    }, 15000);
 
-    return () => clearTimeout(timer);
+    // 2. Show Bottom Banner after 30 seconds
+    const bottomTimer = setTimeout(() => {
+      setShowBottomAd(true);
+    }, 30000);
+
+    // 3. Show Center Modal Popup after 45 seconds
+    const modalTimer = setTimeout(() => {
+      setShowModalAd(true);
+    }, 45000);
+
+    return () => {
+      clearTimeout(topTimer);
+      clearTimeout(bottomTimer);
+      clearTimeout(modalTimer);
+    };
   }, []);
 
   return (
@@ -31,9 +49,10 @@ export function AdPopups() {
             boxSizing: 'border-box',
             display: 'flex',
             alignItems: 'center',
-            justify: 'space-between',
+            justifyContent: 'space-between',
             boxShadow: '0 2px 10px rgba(0,0,0,0.2)',
-            fontSize: '13px'
+            fontSize: '13px',
+            animation: 'fadeIn 0.3s ease-in'
           }}
         >
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flex: 1, overflow: 'hidden' }}>
@@ -98,9 +117,10 @@ export function AdPopups() {
             boxSizing: 'border-box',
             display: 'flex',
             alignItems: 'center',
-            justify: 'space-between',
+            justifyContent: 'space-between',
             boxShadow: '0 -2px 12px rgba(0,0,0,0.25)',
-            borderTop: '1px solid #334155'
+            borderTop: '1px solid #334155',
+            animation: 'fadeIn 0.3s ease-in'
           }}
         >
           <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
@@ -162,8 +182,9 @@ export function AdPopups() {
             zIndex: 10000,
             display: 'flex',
             alignItems: 'center',
-            justify: 'center',
-            padding: '20px'
+            justifyContent: 'center',
+            padding: '20px',
+            animation: 'fadeIn 0.3s ease-in'
           }}
         >
           <div
