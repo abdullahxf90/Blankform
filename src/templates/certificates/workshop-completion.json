@@ -1,0 +1,30 @@
+{
+  "id": "workshop-completion",
+  "title": "Workshop & Course",
+  "type": "certificate",
+  "orientation": "landscape",
+  "aspectRatio": 1.414,
+  "category": "Participation",
+  "description": "Modern crisp layout designed for short courses, bootcamps, and technical workshops.",
+  "styling": {
+    "primaryColor": "#1E4A3D",
+    "accentColor": "#1C1D1F",
+    "fontHeading": "'IBM Plex Sans', sans-serif",
+    "fontName": "'Montserrat', sans-serif",
+    "fontBody": "'IBM Plex Sans', sans-serif",
+    "borderStyle": "modern-box"
+  },
+  "defaultFields": {
+    "issuerName": "OPEN TECH WORKSHOPS",
+    "certificateTitle": "CERTIFICATE OF PARTICIPATION",
+    "subhead": "THIS CERTIFIES THAT",
+    "recipientName": "Claire D. Bennett",
+    "description": "Has actively participated in and successfully completed the intensive 3-day hands-on workshop: Next.js & Fullstack Web Architecture.",
+    "date": "September 1, 2026",
+    "signatory1Name": "Devon Miller",
+    "signatory1Title": "Workshop Host",
+    "signatory2Name": "Amara Okafor",
+    "signatory2Title": "Lead Instructor",
+    "certificateId": "OTW-89301"
+  }
+}

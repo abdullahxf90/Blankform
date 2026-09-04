@@ -1,0 +1,49 @@
+{
+  "id": "creative-portfolio",
+  "title": "Creative Editorial",
+  "type": "cv",
+  "orientation": "portrait",
+  "aspectRatio": 0.707,
+  "category": "Creative",
+  "description": "Bold headline band and clean editorial grid designed for designers and copywriters.",
+  "styling": {
+    "primaryColor": "#1C1D1F",
+    "accentColor": "#1E4A3D",
+    "fontHeading": "'Playfair Display', serif",
+    "fontBody": "'IBM Plex Sans', sans-serif",
+    "layout": "creative"
+  },
+  "sections": ["contact", "summary", "experience", "education", "skills"],
+  "defaultFields": {
+    "fullName": "Sophia Chen",
+    "jobTitle": "Lead UI/UX Designer",
+    "email": "sophia@chen-design.com",
+    "phone": "+1 (555) 765-4321",
+    "location": "Austin, TX",
+    "website": "chen-design.com",
+    "linkedin": "linkedin.com/in/sophiachen-design",
+    "summary": "Multidisciplinary designer crafting intuitive digital experiences, design systems, and brand identities for high-growth tech startups.",
+    "experience": [
+      {
+        "role": "Lead UX Architect",
+        "company": "Studio Horizon",
+        "period": "2022 — Present",
+        "details": "Created unified design system utilized by 4 enterprise applications. Led user testing sessions across 5 countries."
+      },
+      {
+        "role": "Senior Visual Designer",
+        "company": "Paper & Ink Agency",
+        "period": "2019 — 2022",
+        "details": "Designed brand systems, interactive websites, and marketing campaigns for Fortune 500 clients."
+      }
+    ],
+    "education": [
+      {
+        "degree": "B.F.A. in Graphic Design",
+        "institution": "Rhode Island School of Design (RISD)",
+        "period": "2015 — 2019"
+      }
+    ],
+    "skills": "Figma, Design Systems, User Research, Prototyping, Motion Graphics, HTML/CSS, Accessibility (WCAG 2.1)"
+  }
+}

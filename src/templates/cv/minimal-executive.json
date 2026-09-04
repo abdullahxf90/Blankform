@@ -1,0 +1,49 @@
+{
+  "id": "minimal-executive",
+  "title": "Minimal Executive",
+  "type": "cv",
+  "orientation": "portrait",
+  "aspectRatio": 0.707,
+  "category": "Executive",
+  "description": "Clean single-column layout with subtle hairline section rules and refined typography.",
+  "styling": {
+    "primaryColor": "#1C1D1F",
+    "accentColor": "#1E4A3D",
+    "fontHeading": "'Source Serif 4', serif",
+    "fontBody": "'IBM Plex Sans', sans-serif",
+    "layout": "single-column"
+  },
+  "sections": ["contact", "summary", "experience", "education", "skills"],
+  "defaultFields": {
+    "fullName": "Sarah Jenkins",
+    "jobTitle": "Senior Product Manager",
+    "email": "sarah.jenkins@example.com",
+    "phone": "+1 (555) 234-5678",
+    "location": "San Francisco, CA",
+    "website": "sarahjenkins.design",
+    "linkedin": "linkedin.com/in/sarahjenkins",
+    "summary": "Product leader with 8+ years of experience steering cross-functional teams to launch scalable SaaS products. Specialist in customer research, data-informed roadmapping, and agile delivery.",
+    "experience": [
+      {
+        "role": "Lead Product Manager",
+        "company": "Vanguard Tech Systems",
+        "period": "2023 — Present",
+        "details": "Led a cross-functional team of 14 engineers and designers. Increased user retention by 28% through redesigned onboarding workflows."
+      },
+      {
+        "role": "Senior Product Specialist",
+        "company": "Apex Software Solutions",
+        "period": "2020 — 2023",
+        "details": "Managed product roadmap for enterprise analytics tool. Oversaw API integration partnerships resulting in $1.4M ARR growth."
+      }
+    ],
+    "education": [
+      {
+        "degree": "B.S. in Business Information Systems",
+        "institution": "University of California, Berkeley",
+        "period": "2016 — 2020"
+      }
+    ],
+    "skills": "Product Strategy, User Research, Agile & Scrum, Data Analytics, Roadmapping, SQL, Wireframing, Stakeholder Management"
+  }
+}

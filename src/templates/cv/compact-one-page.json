@@ -1,0 +1,49 @@
+{
+  "id": "compact-one-page",
+  "title": "Compact One-Page",
+  "type": "cv",
+  "orientation": "portrait",
+  "aspectRatio": 0.707,
+  "category": "Compact",
+  "description": "High-density scannable format designed to fit maximum information on a single page cleanly.",
+  "styling": {
+    "primaryColor": "#1C1D1F",
+    "accentColor": "#1E4A3D",
+    "fontHeading": "'IBM Plex Sans', sans-serif",
+    "fontBody": "'IBM Plex Sans', sans-serif",
+    "layout": "compact"
+  },
+  "sections": ["contact", "summary", "experience", "education", "skills"],
+  "defaultFields": {
+    "fullName": "Alex Mercer",
+    "jobTitle": "DevOps & Infrastructure Engineer",
+    "email": "alex.mercer@cloudinfra.io",
+    "phone": "+1 (555) 345-6789",
+    "location": "Seattle, WA",
+    "website": "alexmercer.io",
+    "linkedin": "linkedin.com/in/alexmercer",
+    "summary": "Infrastructure engineer specializing in AWS cloud automation, Kubernetes cluster optimization, and CI/CD pipelines.",
+    "experience": [
+      {
+        "role": "Senior Infrastructure Engineer",
+        "company": "DataPipe Cloud Systems",
+        "period": "2021 — Present",
+        "details": "Managed multi-region Kubernetes clusters with 99.99% uptime SLA. Reduced cloud deployment times from 45 min to 4 min."
+      },
+      {
+        "role": "DevOps Engineer",
+        "company": "Streamline Tech",
+        "period": "2019 — 2021",
+        "details": "Built Terraform infrastructure-as-code modules used across 20+ internal microservices."
+      }
+    ],
+    "education": [
+      {
+        "degree": "B.S. in Computer Engineering",
+        "institution": "University of Washington",
+        "period": "2015 — 2019"
+      }
+    ],
+    "skills": "Kubernetes, Docker, Terraform, AWS, Python, Bash, CI/CD (GitHub Actions), Prometheus, Linux Administration"
+  }
+}

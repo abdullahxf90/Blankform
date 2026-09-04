@@ -1,0 +1,50 @@
+{
+  "id": "technical-engineer",
+  "title": "Technical & Engineering",
+  "type": "cv",
+  "orientation": "portrait",
+  "aspectRatio": 0.707,
+  "category": "Technical",
+  "description": "Structured developer resume layout with explicit technical stack groupings and project links.",
+  "styling": {
+    "primaryColor": "#1C1D1F",
+    "accentColor": "#5B5D63",
+    "fontHeading": "'Source Serif 4', serif",
+    "fontBody": "'IBM Plex Sans', sans-serif",
+    "layout": "technical"
+  },
+  "sections": ["contact", "summary", "experience", "education", "projects", "skills"],
+  "defaultFields": {
+    "fullName": "David K. Miller",
+    "jobTitle": "Backend & Distributed Systems Engineer",
+    "email": "david.miller@dev.net",
+    "phone": "+1 (555) 901-2345",
+    "location": "Chicago, IL",
+    "website": "github.com/dkmiller",
+    "linkedin": "linkedin.com/in/dkmiller-eng",
+    "summary": "Systems developer with 7 years of expertise in Go, Rust, and distributed database architecture.",
+    "experience": [
+      {
+        "role": "Staff Backend Engineer",
+        "company": "FastDB Engine Inc.",
+        "period": "2023 — Present",
+        "details": "Engineered distributed log storage module in Rust handling 50k writes/sec with sub-millisecond p99 latency."
+      },
+      {
+        "role": "Software Engineer",
+        "company": "FinTech Core Systems",
+        "period": "2019 — 2023",
+        "details": "Developed high-throughput transaction ledger in Go with zero-downtime database migration strategy."
+      }
+    ],
+    "education": [
+      {
+        "degree": "B.S. in Computer Science & Mathematics",
+        "institution": "University of Illinois Urbana-Champaign",
+        "period": "2015 — 2019"
+      }
+    ],
+    "projects": "Open-source contributor to Tokio async runtime & Raft consensus protocol implementation in Go.",
+    "skills": "Go, Rust, C++, Distributed Systems, PostgreSQL, Redis, gRPC, Microservices, Performance Profiling"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "classic-excellence",
+  "title": "Classic Excellence",
+  "type": "certificate",
+  "orientation": "landscape",
+  "aspectRatio": 1.414,
+  "category": "Achievement",
+  "description": "Formal gold & dark ink ornamental certificate with traditional serif typography.",
+  "styling": {
+    "primaryColor": "#1C1D1F",
+    "accentColor": "#C59B27",
+    "fontHeading": "'Playfair Display', serif",
+    "fontName": "'Alex Brush', cursive",
+    "fontBody": "'IBM Plex Sans', sans-serif",
+    "borderStyle": "ornamental-gold"
+  },
+  "defaultFields": {
+    "issuerName": "ACME GLOBAL ACADEMY",
+    "certificateTitle": "CERTIFICATE OF EXCELLENCE",
+    "subhead": "PROUDLY PRESENTED TO",
+    "recipientName": "Alexander Wright",
+    "description": "For demonstrating exceptional mastery and outstanding performance in Advanced Software Engineering & Systems Design.",
+    "date": "September 4, 2026",
+    "signatory1Name": "Dr. Eleanor Vance",
+    "signatory1Title": "Director of Studies",
+    "signatory2Name": "Marcus Sterling",
+    "signatory2Title": "Lead Instructor",
+    "certificateId": "CERT-2026-8941"
+  }
+}

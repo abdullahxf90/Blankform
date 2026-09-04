@@ -1,0 +1,30 @@
+{
+  "id": "academic-diploma",
+  "title": "Academic Diploma",
+  "type": "certificate",
+  "orientation": "landscape",
+  "aspectRatio": 1.414,
+  "category": "Achievement",
+  "description": "Traditional university diploma style with double border seal and serif calligraphic name.",
+  "styling": {
+    "primaryColor": "#1C1D1F",
+    "accentColor": "#8A2E22",
+    "fontHeading": "'Cinzel', serif",
+    "fontName": "'Cormorant Garamond', serif",
+    "fontBody": "'Cormorant Garamond', serif",
+    "borderStyle": "double-academic"
+  },
+  "defaultFields": {
+    "issuerName": "UNIVERSITAS EXCELLENTIA",
+    "certificateTitle": "DIPLOMA OF HIGHER DISTINCTION",
+    "subhead": "UPON RECOMMENDATION OF THE FACULTY, BE IT KNOWN THAT",
+    "recipientName": "Jonathan Edward Vance",
+    "description": "HAVING SATISFIED ALL ACADEMIC REQUIREMENTS HAS BEEN CONFERRED THE HIGHER DIPLOMA IN DATA SCIENCE AND ARTIFICIAL INTELLIGENCE WITH HIGHEST HONORS.",
+    "date": "MAY 15, 2026",
+    "signatory1Name": "Prof. Charles Montgomery",
+    "signatory1Title": "Dean of Faculty",
+    "signatory2Name": "Dr. Beatrice Dupont",
+    "signatory2Title": "University Chancellor",
+    "certificateId": "UNIV-2026-9012"
+  }
+}

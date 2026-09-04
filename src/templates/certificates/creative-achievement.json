@@ -1,0 +1,30 @@
+{
+  "id": "creative-achievement",
+  "title": "Creative Studio",
+  "type": "certificate",
+  "orientation": "landscape",
+  "aspectRatio": 1.414,
+  "category": "Appreciation",
+  "description": "Minimalist editorial design with corner framing and bold typographic contrast.",
+  "styling": {
+    "primaryColor": "#1C1D1F",
+    "accentColor": "#1E4A3D",
+    "fontHeading": "'Montserrat', sans-serif",
+    "fontName": "'Playfair Display', serif",
+    "fontBody": "'IBM Plex Sans', sans-serif",
+    "borderStyle": "corner-frame"
+  },
+  "defaultFields": {
+    "issuerName": "STUDIO NINE CREATIVE LAB",
+    "certificateTitle": "CERTIFICATE OF APPRECIATION",
+    "subhead": "PRESENTED TO",
+    "recipientName": "Elena Rostova",
+    "description": "In recognition of outstanding artistic contribution, creative leadership, and collaborative spirit during the 2026 International Design Showcase.",
+    "date": "July 12, 2026",
+    "signatory1Name": "Mateo Rossi",
+    "signatory1Title": "Creative Director",
+    "signatory2Name": "Sarah Jenkins",
+    "signatory2Title": "Managing Partner",
+    "certificateId": "SN-APP-7721"
+  }
+}

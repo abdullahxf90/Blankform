@@ -1,0 +1,30 @@
+{
+  "id": "modern-minimal",
+  "title": "Modern Signal",
+  "type": "certificate",
+  "orientation": "landscape",
+  "aspectRatio": 1.414,
+  "category": "Completion",
+  "description": "Architectural layout featuring signal green accents and clean modern typography.",
+  "styling": {
+    "primaryColor": "#1E4A3D",
+    "accentColor": "#5B5D63",
+    "fontHeading": "'Source Serif 4', serif",
+    "fontName": "'IBM Plex Sans', sans-serif",
+    "fontBody": "'IBM Plex Sans', sans-serif",
+    "borderStyle": "clean-signal"
+  },
+  "defaultFields": {
+    "issuerName": "DESIGN & TECH INSTITUTE",
+    "certificateTitle": "CERTIFICATE OF COMPLETION",
+    "subhead": "THIS IS TO CERTIFY THAT",
+    "recipientName": "Sophia Chen",
+    "description": "Has successfully completed the 12-week intensive program in User Experience Architecture and Digital Product Design.",
+    "date": "August 28, 2026",
+    "signatory1Name": "Julian Thorne",
+    "signatory1Title": "Program Director",
+    "signatory2Name": "Hannah Abbott",
+    "signatory2Title": "Head of Design",
+    "certificateId": "DTI-88392-2026"
+  }
+}

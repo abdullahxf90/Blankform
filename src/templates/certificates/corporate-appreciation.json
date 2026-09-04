@@ -1,0 +1,30 @@
+{
+  "id": "corporate-appreciation",
+  "title": "Corporate Executive",
+  "type": "certificate",
+  "orientation": "landscape",
+  "aspectRatio": 1.414,
+  "category": "Appreciation",
+  "description": "Clean executive layout with subtle double line borders and formal hierarchy.",
+  "styling": {
+    "primaryColor": "#1C1D1F",
+    "accentColor": "#5B5D63",
+    "fontHeading": "'Source Serif 4', serif",
+    "fontName": "'Cinzel', serif",
+    "fontBody": "'IBM Plex Sans', sans-serif",
+    "borderStyle": "executive-double"
+  },
+  "defaultFields": {
+    "issuerName": "NEXUS ENTERPRISE SOLUTIONS",
+    "certificateTitle": "RECOGNITION OF EXCELLENCE",
+    "subhead": "HONORING THE VALUABLE CONTRIBUTIONS OF",
+    "recipientName": "David K. Miller",
+    "description": "For exemplary dedication, strategic leadership, and achieving outstanding business results in Q2 2026.",
+    "date": "June 30, 2026",
+    "signatory1Name": "Rachel Hayes",
+    "signatory1Title": "Chief Executive Officer",
+    "signatory2Name": "Thomas Vance",
+    "signatory2Title": "VP of Operations",
+    "certificateId": "NEX-2026-4401"
+  }
+}

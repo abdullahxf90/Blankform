@@ -1,0 +1,50 @@
+{
+  "id": "academic-cv",
+  "title": "Academic & Research",
+  "type": "cv",
+  "orientation": "portrait",
+  "aspectRatio": 0.707,
+  "category": "Academic",
+  "description": "Formal layout for researchers, educators, and scholars with publication listings.",
+  "styling": {
+    "primaryColor": "#1C1D1F",
+    "accentColor": "#5B5D63",
+    "fontHeading": "'Source Serif 4', serif",
+    "fontBody": "'Source Serif 4', serif",
+    "layout": "academic"
+  },
+  "sections": ["contact", "summary", "experience", "education", "publications", "skills"],
+  "defaultFields": {
+    "fullName": "Dr. Eleanor Vance",
+    "jobTitle": "Associate Professor of Computational Biology",
+    "email": "e.vance@university.edu",
+    "phone": "+1 (555) 432-1098",
+    "location": "Boston, MA",
+    "website": "faculty.university.edu/vance",
+    "linkedin": "linkedin.com/in/eleanorvance-phd",
+    "summary": "Computational biologist focusing on algorithmic genomics, high-performance sequence alignment, and open science data infrastructure.",
+    "experience": [
+      {
+        "role": "Associate Professor",
+        "company": "Department of Computer Science, MIT",
+        "period": "2021 — Present",
+        "details": "Directing Genomics Computation Lab. Principal Investigator on $2.1M NSF grant for parallel sequence processing."
+      },
+      {
+        "role": "Postdoctoral Research Fellow",
+        "company": "Broad Institute",
+        "period": "2018 — 2021",
+        "details": "Developed open-source python tools for single-cell transcriptomics data parsing."
+      }
+    ],
+    "education": [
+      {
+        "degree": "Ph.D. in Computational Biology",
+        "institution": "Harvard University",
+        "period": "2013 — 2018"
+      }
+    ],
+    "publications": "Vance E., et al. (2025). 'Algorithmic Optimization in High-Throughput Sequence Mapping.' Journal of Computational Biology, 42(3), 112-129.",
+    "skills": "Algorithmic Genomics, Python, C++, High-Performance Computing, Machine Learning, Research Leadership, Peer Review"
+  }
+}

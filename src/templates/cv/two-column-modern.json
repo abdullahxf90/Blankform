@@ -1,0 +1,49 @@
+{
+  "id": "two-column-modern",
+  "title": "Two-Column Modern",
+  "type": "cv",
+  "orientation": "portrait",
+  "aspectRatio": 0.707,
+  "category": "Minimal",
+  "description": "Left sidebar for quick-scan contact & skills, right column for experience and education.",
+  "styling": {
+    "primaryColor": "#1E4A3D",
+    "accentColor": "#F0EFEA",
+    "fontHeading": "'IBM Plex Sans', sans-serif",
+    "fontBody": "'IBM Plex Sans', sans-serif",
+    "layout": "two-column"
+  },
+  "sections": ["contact", "summary", "experience", "education", "skills"],
+  "defaultFields": {
+    "fullName": "Marcus Sterling",
+    "jobTitle": "Fullstack Web Architect",
+    "email": "marcus.sterling@example.com",
+    "phone": "+1 (555) 890-1234",
+    "location": "New York, NY",
+    "website": "marcus.dev",
+    "linkedin": "linkedin.com/in/marcussterling",
+    "summary": "Architect with 10 years of experience building ultra-fast React applications, Node.js microservices, and modern web engines.",
+    "experience": [
+      {
+        "role": "Principal Systems Architect",
+        "company": "CloudScale Engine Labs",
+        "period": "2022 — Present",
+        "details": "Architected low-latency web rendering engine handling over 5M daily operations. Reduced infrastructure compute costs by 35%."
+      },
+      {
+        "role": "Senior Frontend Engineer",
+        "company": "Nexus Interactive",
+        "period": "2018 — 2022",
+        "details": "Spearheaded design system adoption across 12 product squads. Mentored junior engineers and led quarterly architecture reviews."
+      }
+    ],
+    "education": [
+      {
+        "degree": "M.S. in Computer Science",
+        "institution": "Columbia University",
+        "period": "2016 — 2018"
+      }
+    ],
+    "skills": "JavaScript (ESNext), React, Node.js, TypeScript, Vite, CSS Architecture, GraphQL, Docker, Performance Optimization"
+  }
+}
