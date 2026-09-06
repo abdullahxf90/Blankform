@@ -39,6 +39,8 @@ export function AdPopups() {
       {/* 1. TOP STICKY POPUP AD BANNER (AVAILABLE SPONSOR SPOT) */}
       {showTopAd && (
         <div
+          className="halalspark-ad-container"
+          data-halalspark-slot="top-sticky"
           style={{
             position: 'fixed',
             top: 0,
@@ -105,6 +107,8 @@ export function AdPopups() {
       {/* 2. BOTTOM STICKY POPUP AD BANNER (AVAILABLE SPONSOR SPOT) */}
       {showBottomAd && (
         <div
+          className="halalspark-ad-container"
+          data-halalspark-slot="bottom-sticky"
           style={{
             position: 'fixed',
             bottom: 0,
@@ -172,6 +176,8 @@ export function AdPopups() {
       {/* 3. CENTER 50% SCREEN MODAL POPUP AD (CENTER ALIGNED) */}
       {showModalAd && (
         <div
+          className="halalspark-ad-container"
+          data-halalspark-slot="center-modal"
           style={{
             position: 'fixed',
             inset: 0,

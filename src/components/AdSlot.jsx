@@ -6,12 +6,17 @@ export function AdSlot({ format = 'category-divider', label = 'ADVERTISEMENT SPA
   // 1. Skyscraper 160x600 Left & Right Sticky Side Ad Space
   if (format === 'skyscraper') {
     return (
-      <div className="ad-slot-container" style={{ margin: 0, position: 'sticky', top: '80px', width: '160px' }}>
+      <div 
+        className="ad-slot-container halalspark-ad-container" 
+        data-halalspark-slot="skyscraper"
+        data-ad-format="160x600"
+        style={{ margin: 0, position: 'sticky', top: '80px', width: '160px' }}
+      >
         <div style={{ fontSize: '10px', color: '#1E293B', fontWeight: 700, marginBottom: '6px', textAlign: 'center', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
           {label} (160 × 600)
         </div>
         <div 
-          className="ad-box" 
+          className="ad-box halalspark-ad-box" 
           style={{ 
             width: '160px', 
             height: '480px', 
@@ -66,12 +71,17 @@ export function AdSlot({ format = 'category-divider', label = 'ADVERTISEMENT SPA
   // 2. Sidebar Form Compact 300x250 Ad Space
   if (format === 'sidebar') {
     return (
-      <div className="ad-slot-container" style={{ margin: '20px 0', width: '100%' }}>
+      <div 
+        className="ad-slot-container halalspark-ad-container" 
+        data-halalspark-slot="sidebar"
+        data-ad-format="300x250"
+        style={{ margin: '20px 0', width: '100%' }}
+      >
         <div style={{ fontSize: '10px', color: '#1E293B', fontWeight: 700, marginBottom: '6px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
           {label} (300 × 250)
         </div>
         <div 
-          className="ad-box" 
+          className="ad-box halalspark-ad-box" 
           style={{ 
             width: '100%', 
             padding: '16px 20px', 
@@ -118,12 +128,17 @@ export function AdSlot({ format = 'category-divider', label = 'ADVERTISEMENT SPA
 
   // 3. Ultra-Visible Horizontal Category-Divider Banner Space (728x90 LEADERBOARD SPACE)
   return (
-    <div className="ad-slot-container" style={{ margin: '36px 0', width: '100%', clear: 'both' }}>
+    <div 
+      className="ad-slot-container halalspark-ad-container" 
+      data-halalspark-slot="leaderboard"
+      data-ad-format="728x90"
+      style={{ margin: '36px 0', width: '100%', clear: 'both' }}
+    >
       <div style={{ fontSize: '11px', color: '#1E293B', fontWeight: 800, marginBottom: '6px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
         📢 {label} (728 × 90 LEADERBOARD AD SPACE)
       </div>
       <div 
-        className="ad-box" 
+        className="ad-box halalspark-ad-box" 
         style={{ 
           width: '100%', 
           backgroundColor: '#FEF3C7', 
